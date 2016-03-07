@@ -39,7 +39,6 @@ var quotes = [{
 
 
 
-
 var random = Math.floor((Math.random() * quotes.length));
 var quo = quotes[random].quote;
 
