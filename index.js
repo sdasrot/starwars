@@ -1,4 +1,6 @@
 'use strict';
+var react = require('react');
+var react_dom = require('react-dom');
 
 var quotes = [{
   'author': '- Yoda',
@@ -34,3 +36,40 @@ var quotes = [{
   'author': '- Darth Vader',
   'quote': 'The Force is strong with this one.'
 }];
+
+
+
+
+var random = Math.floor((Math.random() * quotes.length));
+var quo = quotes[random].quote;
+
+
+
+function Quote()
+{
+  ReactDOM.render(
+    React.createElement('h1', null, quotee),
+    document.getElementById('qu1')
+  );
+}
+
+
+function Character()
+{
+  ReactDOM.render(
+    React.createElement('h1', null, quotes[random].author +": "+ quo),
+    document.getElementById('qu2')
+  );
+}
+
+
+function Randomm()
+{
+  var auth = quotes.map(function(content, index){
+    return content.author;
+  });
+
+  ReactDOM.render(
+    React.createElement('h1', null, auth),
+    document.getElementById('qu3')
+  );
